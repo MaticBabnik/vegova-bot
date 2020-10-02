@@ -29,9 +29,9 @@ client.on('guildMemberAdd', member => {
 
     const embed = new MessageEmbed()
         .setColor('#ff0099')
-        .setDescription(`Hey <@${user.id}>, has joined \n\n **WELCOME**`)
+        .setDescription(`Hey <@${user.id}>, has joined \n\n **Welcome to the Vegova Discord server**`)
         .setThumbnail(user.avatarURL({ dynamic: true }) || user.defaultAvatarURL)
-        .setFooter(...randomItems(['（＾ｖ＾', '( ͡° ͜ʖ ͡°)']))
+        .setFooter(...randomItems(['（＾ｖ＾)', '( ͡° ͜ʖ ͡°)']))
 
     channel.send(embed)
 })
