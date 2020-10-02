@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.vegova.si/AikenAhac/vegova-bot.git"
+    "url": "https://github.com/VegovaLjubljana/vegova-bot.git"
   },
-  "author": "Aiken Tine Ahac, Martin Hanzlowsky",
-  "license": "ISC",
+  "author": "Aiken Tine Ahac, Martin Hanzlowsky, Matic Babnik",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
