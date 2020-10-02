@@ -31,6 +31,7 @@ client.on('guildMemberAdd', member => {
     const welcomeChannels = [ 'welcome-messages', 'join-messages' ]
     const { user, guild } = member
     const channel = guild.channels.cache.find(channel => channel.type === 'text' && welcomeChannels.includes(channel.name))
+    member.roles.set(['761506206610882560']);
 
     const embed = new MessageEmbed()
     embed.setColor('#ff0099')
