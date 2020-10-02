@@ -12,11 +12,11 @@ const client = new Client()
 
 client.once('ready', () => console.log(`Logged in as ${client.user.username}`))
 
-let elektrotenik = system.createOption("elektrotehnika:761546567660208148", "761359929948504102");
+let elektrotehnik = system.createOption("elektrotehnika:761546567660208148", "761359929948504102");
 let racunalnicar = system.createOption("racunalnistvo:761546557014540308", "761359808137003049");
 let gimnazijec = system.createOption("gimnazija:761546544428089355", "761360052250476574");
 
-system.createMessage("761552751343566909", "761298424338317342", 1, null, elektrotenik, racunalnicar, gimnazijec);
+system.createMessage("761552751343566909", "761298424338317342", 1, null, elektrotehnik, racunalnicar, gimnazijec);
 
 system.init();
 
