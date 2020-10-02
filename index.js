@@ -4,6 +4,8 @@ const { Client, MessageEmbed } = require('discord.js')
 const ReactionRole = require("reaction-role");
 const system = new ReactionRole(process.env.TOKEN);
 
+const { randomItems } = require('./util')
+
 const prefix = ">>";
 
 const client = new Client()
@@ -21,15 +23,15 @@ system.init();
 client.on('message', messageHandler)
 
 client.on('guildMemberAdd', member => {
-    const welcomeChannels = [ 'welcome-messages', 'join-messages' ]
+    const welcomeChannels = ['welcome-messages', 'join-messages']
     const { user, guild } = member
     const channel = guild.channels.cache.find(channel => channel.type === 'text' && welcomeChannels.includes(channel.name))
 
     const embed = new MessageEmbed()
-    embed.setColor('#ff0099')
-    embed.setDescription(`Hey <@${user.id}>, has joined \n\n **WELCOME**`)
-    embed.setThumbnail(user.avatarURL({ dynamic: true }))
-    embed.setFooter('MrPolarBear#0669 is best coder（＾ｖ＾）')
+        .setColor('#ff0099')
+        .setDescription(`Hey <@${user.id}>, has joined \n\n **WELCOME**`)
+        .setThumbnail(user.avatarURL({ dynamic: true }) || user.defaultAvatarURL)
+        .setFooter(...randomItems(['（＾ｖ＾', '( ͡° ͜ʖ ͡°)']))
 
     channel.send(embed)
 })
