@@ -21,21 +21,21 @@ system.init();
 client.on('message', messageHandler)
 
 client.on('guildMemberAdd', member => {
-    const welcomeChannels = [ 'join-messages', 'welcome-messages' ]
+    const welcomeChannels = [ 'welcome-messages', 'join-messages' ]
     const { user, guild } = member
     const channel = guild.channels.cache.find(channel => channel.type === 'text' && welcomeChannels.includes(channel.name))
 
     const embed = new MessageEmbed()
     embed.setColor('#ff0099')
-    embed.setDescription(`Hey <@${user.id}>, has joined \n\n **Welcome** to the Vegova Discord server`)
+    embed.setDescription(`Hey <@${user.id}>, has joined \n\n **WELCOME**`)
     embed.setThumbnail(user.avatarURL({ dynamic: true }))
-    embed.setFooter('（＾ｖ＾）')
+    embed.setFooter('MrPolarBear#0669 is best coder（＾ｖ＾）')
 
     channel.send(embed)
 })
 
 client.on('guildMemberRemove', member => {
-    const welcomeChannels = [ 'join-messages', 'welcome-messages' ]
+    const welcomeChannels = [ 'welcome-messages', 'join-messages' ]
     const { user, guild } = member
     const channel = guild.channels.cache.find(channel => channel.type === 'text' && welcomeChannels.includes(channel.name))
 
